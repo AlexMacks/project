@@ -4,7 +4,10 @@ from django.http import HttpResponse
 # Create your views here.
 
 def main(request):  
-    return HttpResponse("main page")
+    """
+    Представление рендерит шаблон base.html
+    """
+    return render(request, "base.html")
 
 def info(request):
     return HttpResponse("goods list")
