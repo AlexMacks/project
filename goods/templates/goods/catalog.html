@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% comment %} Этот шаблон расширяет базовый шаблон base.html {% endcomment %}
+{% comment %} cards/templates/cards/catalog.html {% endcomment %}
+
+{% block title %}
+  Каталог товаров
+{% endblock %}
+
+{% block content %}
+  <h1>Каталог товаров</h1>
+  <p>Всего товаров: {{ cards_count }}</p>
+  <p>Всего пользователей: {{ users_count }}</p>
+  <ul>
+    {% for card in cards %}
+        <li>
+            {% include "include/card_preview.html" %}
+        </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
